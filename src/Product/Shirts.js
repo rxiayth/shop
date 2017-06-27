@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Shirts extends React.Component {
+
 	render() {
 		let dataLayer = this.props.dataLayer;
+		console.dir(dataLayer)
 		return (
 			<div className="shirts">
 				<h1>{dataLayer.page.name}</h1>
@@ -13,9 +15,7 @@ class Shirts extends React.Component {
 }
 
 Shirts.propTypes = {
-	dataLayer: React.PropTypes.object.isRequired
+	dataLayer: PropTypes.object.isRequired
 }
-
-
 
 export default Shirts;

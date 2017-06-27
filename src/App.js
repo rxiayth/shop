@@ -10,6 +10,9 @@ class App extends Component {
 			dataLayer: {
 				page: {
 					name: ''
+				},
+				user: {
+					isLoggedIn: 'false'
 				}
 			}
 		}
@@ -19,8 +22,7 @@ class App extends Component {
 	update(type,state) {
 		if (type==="dataLayer") {
 			this.setState({dataLayer:state.dataLayer});
-			console.log('state updated: ');
-			console.dir(state.dataLayer);
+			console.log('state updated: ' + state.dataLayer.page.name);
 		}
 		
 	}

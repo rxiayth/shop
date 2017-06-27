@@ -1,33 +1,40 @@
 import React, { Component } from 'react'
-import styles from './index.css';
+import './index.css';
 
-class Header extends React.Component {
+class Header extends Component {
 	constructor(props) {
 		super(props);
 		this.update=this.update.bind(this);
 	}
 
-	update(e) {
-		this.props.update("dataLayer", 
-			{
-				dataLayer: {
-					page: {
-						name: e.target.id
+	update(name) {
+		return (e) => {
+			this.props.update("dataLayer", 
+				{
+					dataLayer: {
+						page: {
+							// name: e.target.id
+							name
+						}
 					}
 				}
-			}
-	)}
+			
+			)
+		}
+		// this.props.dataLayer.page.name = e.target.id;
+		// this.forceUpdate();
+	}
 
 	render() {
 		return (
 			<div className="header">
-				<li><h1>Shop</h1></li>
-				<li id="Login" onClick={this.update}>Login</li>
-				<li id="Shirts" onClick={this.update}>Shirts</li>
-				<li id="Pants" onClick={this.update}> Pants</li>
-				<li id="Shoes" onClick={this.update}>Shoes</li>
-				<li id="Accessories" onClick={this.update}>Accessories</li>
-				<li id="Deals" onClick={this.update}>Deals</li>
+				<li><h1 onClick={this.update('Homepage')}>Shop</h1></li>
+				<li onClick={this.update('Login')}>Login</li>
+				<li onClick={this.update('Shirts')}>Shirts</li>
+				<li onClick={this.update('Pants')}> Pants</li>
+				<li onClick={this.update('Shoes')}>Shoes</li>
+				<li onClick={this.update('Accessories')}>Accessories</li>
+				<li onClick={this.update('Deals')}>Deals</li>
 			</div>
 		)
 
