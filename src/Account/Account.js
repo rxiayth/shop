@@ -19,6 +19,7 @@ class Account extends Component{
 			return (
 				<Login
 					dataLayer={this.props.dataLayer} 
+					submitForm={this.props.submitForm}
 				/>
 			)
 

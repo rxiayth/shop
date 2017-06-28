@@ -14,6 +14,8 @@ class Main extends Component {
 	
 	constructor(props){
 		super(props);		
+		this.submitForm = this.submitForm.bind(this);
+		this.renderPageComponent=this.renderPageComponent.bind(this);
 	}
 
 	get PageComponents() {
@@ -31,7 +33,24 @@ class Main extends Component {
 
 	renderPageComponent(productName){
 		const PageComponent = this.PageComponents[productName];
-		return <PageComponent dataLayer={this.props.dataLayer} />;
+		return 	<PageComponent 
+					dataLayer={this.props.dataLayer}
+					submitForm={this.submitForm}
+			 	/>;
+	}
+
+	submitForm(e){
+		e.preventDefault();
+		let dataLayer = this.props.dataLayer;
+		let isSelected = this.props.isSelected;
+		dataLayer.user.isLoggedIn=true;
+		dataLayer.page.name="Account";
+		isSelected="Account";
+		// Object.assign(dataLayer.user,);
+		this.setState({dataLayer});
+		this.setState({isSelected});
+
+		console.dir(this.props.dataLayer.user);
 	}
 	
 	render() {
