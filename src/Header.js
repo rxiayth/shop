@@ -5,6 +5,7 @@ class Header extends Component {
 	constructor(props) {
 		super(props);
 		this.update=this.update.bind(this);
+		this.StyleSelected=this.StyleSelected.bind(this);
 	}
 
 
@@ -18,10 +19,14 @@ class Header extends Component {
 		}		
 	}
 
-	get StyleSelected() {
-		return {
-        	backgroundColor: 'lightblue'
-    	}
+	StyleSelected(page) {
+		if (this.props.isSelected===page) {
+			return {
+	        	backgroundColor: 'lightblue'
+	    	}
+		} else {
+			return {}
+		}
 	};
 
 	//put in list and dynamically render css
@@ -30,13 +35,13 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="header">
-				<li><h1 onClick={this.update('Homepage', { isSelected:'true'})}>Homepage</h1></li>
-				<li onClick={this.update('Account', { isSelected:'true'})}>Account</li>
-				<li onClick={this.update('Mobility', { isSelected:'true'})}>Mobility</li>
-				<li onClick={this.update('Internet', { isSelected:'true'})}> Internet</li>
-				<li onClick={this.update('TV', { isSelected:'true'})}>Shoes</li>
-				<li onClick={this.update('Accessories', { isSelected:'true'})}>Accessories</li>
-				<li onClick={this.update('Deals', { isSelected:'true'})}>Deals</li>
+				<li style={this.StyleSelected('Homepage')} ><h1 onClick={this.update('Homepage', { isSelected:'true'})}>Homepage</h1></li>
+				<li style={this.StyleSelected('Account')}  onClick={this.update('Account', { isSelected:'true'})}>Account</li>
+				<li style={this.StyleSelected('Mobility')}  onClick={this.update('Mobility', { isSelected:'true'})}>Mobility</li>
+				<li style={this.StyleSelected('Internet')}  onClick={this.update('Internet', { isSelected:'true'})}> Internet</li>
+				<li style={this.StyleSelected('TV')}  onClick={this.update('TV', { isSelected:'true'})}>Shoes</li>
+				<li style={this.StyleSelected('Accessories')}  onClick={this.update('Accessories', { isSelected:'true'})}>Accessories</li>
+				<li style={this.StyleSelected('Deals')}  onClick={this.update('Deals', { isSelected:'true'})}>Deals</li>
 			</div>
 		)
 
