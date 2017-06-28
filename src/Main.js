@@ -8,6 +8,7 @@ import Internet from './Product/Internet';
 import TV from './Product/TV';
 import Accessories from './Product/Accessories';
 import Deals from './Product/Deals';
+import Support from './Support/Support';
 
 class Main extends Component {
 	
@@ -23,7 +24,8 @@ class Main extends Component {
 			Internet,
 			TV,
 			Accessories,
-			Deals
+			Deals,
+			Support
 		}
 	}
 

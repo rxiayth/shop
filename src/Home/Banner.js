@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class Banner extends Component {
 	render() { 
 		return (
-			<div className="banner">
+			<div className="Banner" style={this.props.style}>
 				<h1>Banner Banner Banner <br/>
 				 	Huge Promotion<br/>
-				 	<button>Shop Now</button>
+				 	<button>Learn More</button>
 				</h1>				
 			</div>
 

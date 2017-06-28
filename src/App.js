@@ -9,15 +9,15 @@ class App extends Component {
 		this.state = {
 			dataLayer: {
 				page: {
-					name: 'Homepage'
+					name: 'Account'
 				},
 				user: {
 					name: 'UserName',
 					id: '111-111-111',
-					isLoggedIn: 'false'
+					isLoggedIn: false
 				}
 			},	
-			isSelected: "Homepage"
+			isSelected: "Account"
 			
 		}
 		this.update=this.update.bind(this);
