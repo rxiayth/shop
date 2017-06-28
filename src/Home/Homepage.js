@@ -5,7 +5,7 @@ class Homepage extends React.Component {
 	render() {
 		return (
 			<div className="homepage">
-			    <h1>Homepage</h1>
+			    <h1>{this.props.dataLayer.page.name}</h1>
 			</div>
 		);
 	}

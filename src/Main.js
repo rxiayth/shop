@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Homepage from './Product/Homepage';
+import Homepage from './Home/Homepage';
 import Login from './Login';
-import Shirts from './Product/Shirts';
-import Pants from './Product/Pants';
-import Shoes from './Product/Shoes';
+import Mobility from './Product/Mobility';
+import Internet from './Product/Internet';
+import TV from './Product/TV';
 import Accessories from './Product/Accessories';
 import Deals from './Product/Deals';
 
@@ -19,9 +19,9 @@ class Main extends Component {
 		return {
 			Homepage,
 			Login,
-			Shirts, 
-			Pants,
-			Shoes,
+			Mobility, 
+			Internet,
+			TV,
 			Accessories,
 			Deals
 		}

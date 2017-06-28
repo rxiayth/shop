@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Pants extends React.Component {
+class Internet extends Component {
 	
 	constructor(props) {
 		super(props);
@@ -9,7 +9,7 @@ class Pants extends React.Component {
 
 	render() {
 		return (
-			<div> 
+			<div className="Internet"> 
 				<h1>{this.props.dataLayer.page.name}</h1>
 			</div>
 		)
@@ -17,4 +17,4 @@ class Pants extends React.Component {
 
 }
 
-export default Pants;
+export default Internet;

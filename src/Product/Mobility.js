@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Shirts extends React.Component {
+class Mobility extends React.Component {
 
 	render() {
 		let dataLayer = this.props.dataLayer;
 		console.dir(dataLayer)
 		return (
-			<div className="shirts">
+			<div className="Mobility">
 				<h1>{dataLayer.page.name}</h1>
 			</div>
 		);
 	}
 }
 
-Shirts.propTypes = {
+Mobility.propTypes = {
 	dataLayer: PropTypes.object.isRequired
 }
 
-export default Shirts;
+export default Mobility;
