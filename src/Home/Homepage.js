@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import Banner from './Banner';
 
 class Homepage extends React.Component {
 
 	render() {
 		return (
 			<div className="homepage">
-			    <h1>{this.props.dataLayer.page.name}</h1>
+			    <Banner />
+			    
 			</div>
 		);
 	}
