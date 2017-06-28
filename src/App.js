@@ -9,22 +9,31 @@ class App extends Component {
 		this.state = {
 			dataLayer: {
 				page: {
-					name: ''
+					name: 'Homepage'
 				},
 				user: {
+					name: 'UserName',
+					id: '111-111-111',
 					isLoggedIn: 'false'
 				}
-			}
+			},	
+			isSelected: "Homepage"
+			
 		}
 		this.update=this.update.bind(this);
 	}
 
 	update(type,state) {
-		if (type==="dataLayer") {
-			this.setState({dataLayer:state.dataLayer});
-			console.log('state updated: ' + state.dataLayer.page.name);
+		if (type === "dataLayer") {
+			let dataLayer = state;
+			this.setState({dataLayer});
+			console.log('state dataLayer updated: ' + dataLayer.page.name);
 		}
-		
+		if (type === "isSelected") {
+			let isSelected = state;
+			this.setState({isSelected});
+			console.log('state isSelected updated: ' + isSelected);
+		}
 	}
 	
     render() {
@@ -33,9 +42,11 @@ class App extends Component {
                 <Header
                 	dataLayer={this.state.dataLayer} 
                 	update={this.update}
+                	isSelected={this.state.isSelected} 
                 />
                 <Main 
                 	dataLayer={this.state.dataLayer}
+                	isSelected={this.state.isSelected} 
                 />
                 <Footer />
             </div>

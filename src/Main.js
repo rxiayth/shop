@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Homepage from './Home/Homepage';
-import Login from './Login';
+import Login from './Account/Login';
+import Account from './Account/Account';
 import Mobility from './Product/Mobility';
 import Internet from './Product/Internet';
 import TV from './Product/TV';
@@ -11,14 +12,13 @@ import Deals from './Product/Deals';
 class Main extends Component {
 	
 	constructor(props){
-		super(props);
-		
+		super(props);		
 	}
 
 	get PageComponents() {
 		return {
 			Homepage,
-			Login,
+			Account,
 			Mobility, 
 			Internet,
 			TV,
@@ -28,22 +28,15 @@ class Main extends Component {
 	}
 
 	renderPageComponent(productName){
-		const Product = this.PageComponents[productName];
-		return <Product 
-					dataLayer={this.props.dataLayer} 
-				/>;
+		const PageComponent = this.PageComponents[productName];
+		return <PageComponent dataLayer={this.props.dataLayer} />;
 	}
 	
 	render() {
-
-
 		const pageName = this.props.dataLayer.page.name || "Homepage" ;
-
 		return (
-			<div>
-				{/* <h1> {pageName + " " + "Page"}</h1>. */}
+			<div className={pageName}>
 				{this.renderPageComponent(pageName)}
-
 			</div>
 		)
 	}
