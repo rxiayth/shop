@@ -29,7 +29,8 @@ class Mobility extends Component {
 	render() {
 		return (
 			<div className="Mobility">
-				{this.Phones.map( (phone) => (<Phone product={phone} />) )}
+				<h1>Phones</h1>
+				{this.Phones.map( (phone) => (<Phone key={Object.keys(phone)[0]} product={phone} />) )}
 			</div>
 		);
 	}

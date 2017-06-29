@@ -8,7 +8,7 @@ class Phone extends Component {
 	render() { 
 		return ( 
 			<div className="Phone">
-				<h5>{(Object.values(this.props.product)[0].name)}</h5>
+				<h2>{(Object.values(this.props.product)[0].name)}</h2>
 			</div>
 		)
 	}
