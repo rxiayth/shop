@@ -56,7 +56,7 @@ class Main extends Component {
 	render() {
 		const pageName = this.props.dataLayer.page.name || "Homepage" ;
 		return (
-			<div className={pageName}>
+			<div>
 				{this.renderPageComponent(pageName)}
 			</div>
 		)
