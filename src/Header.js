@@ -13,8 +13,7 @@ class Header extends Component {
 		return (e) => {
 			let dataLayer = this.props.dataLayer;
 			dataLayer.page.name = name;  //(e.target.id)
-			this.props.update('dataLayer', dataLayer);
-			
+			this.props.update('dataLayer', dataLayer);			
 			this.props.update('isSelected', name);
 		}		
 	}
