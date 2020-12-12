@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Banner from './Banner';
 import Feature from './Feature';
 
-class Homepage extends React.Component {
+class Home extends React.Component {
 
 	constructor(props){
 		super(props);
@@ -28,7 +28,7 @@ class Homepage extends React.Component {
 
 	render() {
 		return (
-			<div className='homepage'>
+			<div className='home'>
 			    <Banner style={this.Style('Banner')} />
 			    <Feature style={this.Style('Feature')} />
 			</div>
@@ -37,4 +37,4 @@ class Homepage extends React.Component {
 }
 
 
-export default Homepage;
+export default Home;

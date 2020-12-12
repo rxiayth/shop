@@ -1,4 +1,4 @@
-const DB_Mobility = 
+const DB_Product = 
 	{
 		"m_s000001": {
 			"color":"Midnight Black",
@@ -55,6 +55,6 @@ const DB_Mobility =
 		}
 	}
 	
-export default DB_Mobility;
+export default DB_Product;
 
   

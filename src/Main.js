@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Homepage from './Home/Homepage';
+import Home from './Home/Home';
 import Login from './Account/Login';
 import Account from './Account/Account';
-import Mobility from './Product/Mobility';
+import Product from './Product/Product';
 import Internet from './Product/Internet';
 import TV from './Product/TV';
 import Accessories from './Product/Accessories';
@@ -20,9 +20,9 @@ class Main extends Component {
 
 	get PageComponents() {
 		return {
-			Homepage,
+			Home,
 			Account,
-			Mobility, 
+			Product, 
 			Internet,
 			TV,
 			Accessories,

@@ -9,14 +9,14 @@ class App extends Component {
 		this.state = {
 			dataLayer: {
 				page: {
-					name: 'Mobility'
+					name: 'Home'
 				},
 				user: {
 					name: "",
 					isLoggedIn: false
 				}
 			},	
-			isSelected: "Mobility"
+			isSelected: "Home"
 			
 		}
 		this.update=this.update.bind(this);
@@ -26,7 +26,7 @@ class App extends Component {
 		if (type === "dataLayer") {
 			let dataLayer = state;
 			this.setState({dataLayer});
-			console.table({dataLayer});
+			// console.table({dataLayer});
 		}
 		if (type === "isSelected") {
 			let isSelected = state;
